@@ -16,10 +16,12 @@ class _AlbumViewState extends State<AlbumView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("MVVM 실습"),
+        title: const Text("MVVM practice"),
       ),
+      // consumer를 통해 viewModel과 연결
       body: Consumer<AlbumViewModel>(
         builder: (context, provider, child) {
+          // viewModel에서 albumList를 가져옴
           albumList = provider.albums;
           return ListView.builder(
             itemCount: albumList.length,

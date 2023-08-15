@@ -13,10 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ChangeNotifierProvider<AlbumViewModel>(
-        create: (context) => AlbumViewModel(),
-        child: const AlbumView(),
-      ),
+      home: MultiProvider(providers: [
+        ChangeNotifierProvider<AlbumViewModel>(
+          create: (context) => AlbumViewModel(),
+        ),
+      ], child: const AlbumView()),
     );
   }
 }

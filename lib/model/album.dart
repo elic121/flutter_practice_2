@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 part 'album.g.dart';
 
+// album 데이터의 구조를 정의하는 클래스
 @JsonSerializable()
 class Album {
   int userId;
